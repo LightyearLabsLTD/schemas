@@ -1,0 +1,76 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/item.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Item",
+  "type": "object",
+  "properties": {
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "identity": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["key", "name"]
+    },
+
+    "rarity": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": ["type"]
+    },
+    
+    "display": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "object",
+          "patternProperties": {
+            ".*": {
+              "type": "object",
+              "properties": {
+                "material": {
+                  "$ref": "https://schema.lightyearlabs.net/schemas/material.schema.json"
+                },
+                "displayName": {
+                  "type": "string"
+                },
+                "lore": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": ["material", "displayName"]
+            }
+          }
+        }
+      },
+      "required": ["items"]
+    }
+  },
+
+
+  "required": ["targets", "identity", "rarity", "display"]
+}
