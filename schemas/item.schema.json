@@ -59,7 +59,7 @@
                 "material": {
                   "$ref": "https://schema.lightyearlabs.net/schemas/material.schema.json"
                 },
-                "displayName": {
+                "name": {
                   "type": "string"
                 },
                 "lore": {
@@ -69,7 +69,7 @@
                   }
                 }
               },
-              "required": ["material", "displayName"]
+              "required": ["material", "name"]
             }
           }
         }
