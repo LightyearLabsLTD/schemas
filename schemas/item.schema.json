@@ -6,6 +6,7 @@
 
   "repository": "item",
   "mappers": [
+    "identity",
     "item_stack"
   ],
   
