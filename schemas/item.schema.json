@@ -4,6 +4,7 @@
   "title": "Item",
   "type": "object",
 
+  "repository": "item",
   "mappers": [
     "item_stack"
   ],
