@@ -9,6 +9,10 @@
     "identity",
     "item_stack"
   ],
+
+  "identityMappers": [
+    "item_stack"
+  ],
   
   "properties": {
     "targets": {
