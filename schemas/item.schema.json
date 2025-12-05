@@ -50,7 +50,7 @@
       },
       "required": ["type"]
     },
-    
+
     "display": {
       "type": "object",
       "properties": {
@@ -58,22 +58,7 @@
           "type": "object",
           "patternProperties": {
             ".*": {
-              "type": "object",
-              "properties": {
-                "material": {
-                  "$ref": "https://schema.lightyearlabs.net/schemas/material.schema.json"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "lore": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "required": ["material", "name"]
+              "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/itemstack.schema.json"
             }
           }
         }

@@ -1,0 +1,117 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/minecraft/itemstack.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ItemStack",
+  "description": "Schema for Minecraft ItemStack with full support for custom properties, enchantments, potion and armor data, etc.",
+  "type": "object",
+  "properties": {
+    "material": {
+      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/material.schema.json",
+      "description": "The material type of the item."
+    },
+    "amount": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of items in the stack."
+    },
+    "camouflage": {
+      "oneOf": [
+        { "type": "string", "description": "Camouflage material as a string." },
+        {
+          "type": "object",
+          "properties": {
+            "namespace": { "type": "string" },
+            "key": { "type": "string" }
+          },
+          "required": ["namespace", "key"],
+          "description": "Camouflage defined by namespace and key."
+        }
+      ]
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the item."
+    },
+    "lore": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Lore lines for the item."
+    },
+    "enchants": {
+      "type": "object",
+      "additionalProperties": { "type": "number" },
+      "description": "Map of enchantment names to levels."
+    },
+    "modelData": {
+      "oneOf": [
+        { "type": "integer" },
+        { "type": "string" },
+        {
+          "type": "object",
+          "properties": {
+            "modern": { "type": "string" },
+            "legacy": { "type": "integer" }
+          }
+        }
+      ],
+      "description": "Custom model data, either modern string, legacy int, or object with both."
+    },
+    "skullTexture": {
+      "type": "string",
+      "description": "Base64 skull texture string for player heads."
+    },
+    "itemFlags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of item flags."
+    },
+    "displayOptions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Display options for the item."
+    },
+    "unbreakable": {
+      "type": "boolean",
+      "description": "Whether the item is unbreakable."
+    },
+    "potionData": {
+      "type": "object",
+      "properties": {
+        "color": { "type": "string" },
+        "potions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string" },
+              "duration": { "type": "integer" },
+              "amplifier": { "type": "integer" }
+            },
+            "required": ["type", "duration"]
+          }
+        }
+      },
+      "required": ["color", "potions"]
+    },
+    "armorData": {
+      "type": "object",
+      "properties": {
+        "color": { "type": "string" }
+      },
+      "required": ["color"]
+    },
+    "nbt": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": { "type": "string" },
+          "value": {},
+          "type": { "type": "string" }
+        },
+        "required": ["key", "value", "type"]
+      }
+    }
+  },
+  "required": ["material", "name"]
+}
