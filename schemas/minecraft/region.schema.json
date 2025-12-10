@@ -8,11 +8,11 @@
     "world": { "type": "string" },
 
     "min": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json"
+      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.simple.schema.json"
     },
 
     "max": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json"
+      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.simple.schema.json"
     }
   },
 
