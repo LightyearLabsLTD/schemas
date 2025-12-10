@@ -13,7 +13,9 @@
 
     "maximum": {
       "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.simple.schema.json"
-    }
+    },
+
+    "unlimitedY": { "type": "boolean" }
   },
 
   "required": ["world", "minimum", "maximum"]
