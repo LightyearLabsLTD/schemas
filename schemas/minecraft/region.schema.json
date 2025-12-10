@@ -7,14 +7,14 @@
   "properties": {
     "world": { "type": "string" },
 
-    "min": {
+    "minimum": {
       "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.simple.schema.json"
     },
 
-    "max": {
+    "maximum": {
       "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.simple.schema.json"
     }
   },
 
-  "required": ["world", "min", "max"]
+  "required": ["world", "minimum", "maximum"]
 }
