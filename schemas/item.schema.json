@@ -23,22 +23,7 @@
     },
 
     "identity": {
-      "type": "object",
-      "properties": {
-        "key": {
-          "type": "string"
-        },
-        "name": {
-          "type": "string"
-        },
-        "tags": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "required": ["key", "name"]
+      "$ref": "https://schema.lightyearlabs.net/schemas/identity.schema.json"
     },
 
     "rarity": {

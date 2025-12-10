@@ -16,16 +16,7 @@
     },
 
     "identity": {
-      "type": "object",
-      "properties": {
-        "key": { "type": "string" },
-        "name": { "type": "string" },
-        "tags": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      },
-      "required": ["key", "name"]
+      "$ref": "https://schema.lightyearlabs.net/schemas/identity.schema.json"
     },
 
     "rarity": {
@@ -36,56 +27,23 @@
       "required": ["type"]
     },
 
-    "display": {
-      "type": "object",
-      "properties": {
-        "items": {
-          "type": "object",
-          "patternProperties": {
-            ".*": {
-              "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/itemstack.schema.json"
-            }
-          }
-        }
-      },
-      "required": ["items"]
-    },
+    "zone": {
+        "type": "object",
+        "properties": {
+            "name": { "type": "string" },
+            "region": { "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/region.schema.json" },
+            "teleportPosition": { "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json" },
+            "entranceMessage": { "$ref": "https://schema.lightyearlabs.net/schemas/message.schema.json" },
+            "exitMessage": { "$ref": "https://schema.lightyearlabs.net/schemas/message.schema.json" },
+            "ignoreIfInside": { "type": "array", "items": { "type": "string" } }
+        },
 
-    "name": { "type": "string" },
-
-    "region": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/region.schema.json"
-    },
-
-    "teleportPosition": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json"
-    },
-
-    "entranceMessage": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/message.schema.json"
-    },
-
-    "exitMessage": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/message.schema.json"
-    },
-
-    "tags": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
-
-    "ignoreIfInside": {
-      "type": "array",
-      "items": { "type": "string" }
+        "required": [ "name", "region", "teleportPosition" ]
     }
   },
 
   "required": [
-    "targets",
-    "identity",
-    "rarity",
-    "display",
-    "name",
-    "region"
+    "zone",
+    "identity"
   ]
 }

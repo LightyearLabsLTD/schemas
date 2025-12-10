@@ -1,0 +1,21 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/identity.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Identity",
+  "type": "object",
+
+  "properties": {
+    "key": { "type": "string" },
+    "name": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    
+    "search": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    }
+  },
+
+  "required": ["key", "name"]
+}
