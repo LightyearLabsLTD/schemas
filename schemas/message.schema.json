@@ -1,0 +1,24 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/message.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InteractiveMessage",
+  "type": "object",
+
+  "properties": {
+    "message": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
+    "broadcast": {
+      "oneOf": [
+        { "type": "string" },
+        { "type": "array", "items": { "type": "string" } }
+      ]
+    },
+    "formats": { "type": "object" }
+  },
+
+  "required": [ "message" ]
+}

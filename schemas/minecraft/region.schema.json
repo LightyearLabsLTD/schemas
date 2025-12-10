@@ -1,0 +1,20 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/minecraft/region.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Region",
+  "type": "object",
+
+  "properties": {
+    "world": { "type": "string" },
+
+    "min": {
+      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json"
+    },
+
+    "max": {
+      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json"
+    }
+  },
+
+  "required": ["world", "min", "max"]
+}

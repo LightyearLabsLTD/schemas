@@ -1,0 +1,19 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/minecraft/position.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Position",
+  "type": "object",
+
+  "properties": {
+    "world": { "type": "string" },
+
+    "x": { "type": "number" },
+    "y": { "type": "number" },
+    "z": { "type": "number" },
+
+    "yaw": { "type": "number" },
+    "pitch": { "type": "number" }
+  },
+
+  "required": ["world", "x", "y", "z"]
+}
