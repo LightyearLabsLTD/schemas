@@ -62,11 +62,11 @@
     },
 
     "entranceMessage": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/interactive-message.schema.json"
+      "$ref": "https://schema.lightyearlabs.net/schemas/message.schema.json"
     },
 
     "exitMessage": {
-      "$ref": "https://schema.lightyearlabs.net/schemas/minecraft/interactive-message.schema.json"
+      "$ref": "https://schema.lightyearlabs.net/schemas/message.schema.json"
     },
 
     "tags": {
