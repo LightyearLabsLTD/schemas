@@ -11,12 +11,26 @@
         { "type": "array", "items": { "type": "string" } }
       ]
     },
+    
     "broadcast": {
       "oneOf": [
         { "type": "string" },
         { "type": "array", "items": { "type": "string" } }
       ]
     },
+
+    "title": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "fadeIn": { "type": "number" },
+        "stay": { "type": "number" },
+        "fadeOut": { "type": "number" }
+      },
+      "required": ["title", "subtitle"]
+    },
+
     "formats": { "type": "object" }
   },
 
