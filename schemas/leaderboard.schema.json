@@ -1,0 +1,14 @@
+{
+  "$id": "https://schema.lightyearlabs.net/schemas/leaderboard.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Leaderboard",
+  "type": "object",
+
+  "properties": {
+    "identity": {
+      "$ref": "https://schema.lightyearlabs.net/schemas/identity.schema.json"
+    }
+  },
+
+  "required": [ "identity" ]
+}
