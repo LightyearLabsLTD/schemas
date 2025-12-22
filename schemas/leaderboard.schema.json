@@ -4,6 +4,13 @@
   "title": "Leaderboard",
   "type": "object",
 
+  "repository": "leaderboard",
+  "mappers": [
+    "identity"
+  ],
+
+  "identityMappers": [],
+
   "properties": {
     "identity": {
       "$ref": "https://schema.lightyearlabs.net/schemas/identity.schema.json"
